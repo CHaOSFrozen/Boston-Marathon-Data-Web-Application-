@@ -38,11 +38,10 @@ for index in range(len(details)):
         age = details[index][2] # store the age
        
         # Creates 3 column in the dashboard (Invisible to the Naked Eye)
-        col1, col2, col9, col3, = st.columns(4)
+        col1, col2, col3, = st.columns(4)
         # Use metric function to display each runner's (Labels) detail from the variables. (Values)
         col1.metric(label = "Participant", value = name)
         col2.metric("Age", age) 
-        col9.metric("Country", country)
         col3.metric("Finishing Time (Hours)", time)
 
 #----------- Displays Runner's finishing time based on slider widget  ------------#
