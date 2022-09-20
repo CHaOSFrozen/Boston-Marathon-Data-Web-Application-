@@ -5,9 +5,9 @@ from pathlib import Path
 #----------- Reads the data ------------#
 fp = Path.cwd()/"boston_data.csv"
 
-# Reads csv 
+# Reads the csv 
 with fp.open("r", newline="") as file:
-    data = csv.reader(file)
+    data = csv.reader(file) 
     next(data) # Skips the header
     details = [] # Stores details of each runner
     all_name = [] # Stores just the name of runners 
@@ -37,14 +37,15 @@ for index in range(len(details)):
         country = details[index][3] # store the country
         age = details[index][2] # store the age
        
-        # create 3 column in the dashboard
-        col1, col2, col3 = st.columns(3)
-        # use metric function to display each runner's detail from the variables.
-        col1.metric("Participant", name)
-        col2.metric("Age", age)
+        # Creates 3 column in the dashboard (Invisible to the Naked Eye)
+        col1, col2, col9, col3, = st.columns(4)
+        # Use metric function to display each runner's (Labels) detail from the variables. (Values)
+        col1.metric(label = "Participant", value = name)
+        col2.metric("Age", age) 
+        col9.metric("Country", country)
         col3.metric("Finishing Time (Hours)", time)
 
-#----------- Displays runner's finishing time based on slider widget  ------------#
+#----------- Displays Runner's finishing time based on slider widget  ------------#
 
 # Use select_slider function to allow user to select runners by finishing time
 time_selection = st.select_slider("Select a range of finishing time", options=all_time, value=(min(all_time), max(all_time)))
