@@ -1,6 +1,5 @@
 import streamlit as st
 
-st.write("Hello World")
-st.title("Hello World")
-st.header("Hello World")
-st.write("Hello World")
+st.title("Welcome to Randmau Anime")
+st.header("Buidling the ultimate anime experience for you!")
+
