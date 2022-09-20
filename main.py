@@ -69,31 +69,3 @@ for line in details:
         col6.write(country)
         col7.write(gender)
         col8.write(time)
-
-
-"""
-Create Streamlit App in 2 steps
-STEP 1 
-- Write the code and test out on local host.
-- To run streamlit in terminal: streamlit run filename.py
-
-STEP 2
-- Create a new repo in GitHub to hose the app.
-- Create a new streamlit app in streamlit cloud.
-(For first time user in GitHub and Streamlit, 
-signup GitHub account then sign up Streamlit with GitHub)
-
-GITHUB
-- To work seamlessly between VS code and GitHub, make sure you link up
-GitHub in VS Code, authorisation is required.
-
-- Install GitHub Pull Requests Extensions in VS Code.
-- Use Command Palette (CTRL + SHIFT + P) to "initialize" and "add remote" to GitHub.
-- Finally stage, commmit and push to the repo.
-
-"""
-
-
-
-
-
